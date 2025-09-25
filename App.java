@@ -6,9 +6,21 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 import javax.imageio.ImageIO;
-import org.apache.commons.imaging.*;
+// 需要在pom.xml中添加以下依赖:
+// <dependency>
+//     <groupId>org.apache.commons</groupId>
+//     <artifactId>commons-imaging</artifactId>
+//     <version>1.0-alpha2</version>
+// </dependency>
+// 检查是否已在pom.xml中添加commons-imaging依赖
+// 如果仍无法解析,请确保Maven已正确下载依赖并刷新项目
+import org.apache.commons.imaging.Imaging;
+import org.apache.commons.imaging.ImageReadException;
 import org.apache.commons.imaging.common.*;
 import org.apache.commons.imaging.formats.jpeg.exif.*;
+import org.apache.commons.imaging.formats.jpeg.JpegImageMetadata;
+import org.apache.commons.imaging.formats.tiff.TiffField;
+import org.apache.commons.imaging.formats.tiff.constants.TiffTagConstants;
 
 public class App {
 
